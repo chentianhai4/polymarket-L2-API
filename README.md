@@ -14,13 +14,6 @@
 - 作为 **JS/TS 业务 SDK** 集成到你的策略或服务中
 - 作为 **MCP Server** 暴露工具，供 Agent / MCP Client 调用
 
-## 本次补充内容（确认）
-
-- PolymarketGateway 主要公开 API 列表
-- syncPositions 地址回退、风控模式、下单幂等与自动归一化等关键行为说明
-- mcporter 依赖提示与 openclaw:demo 快速示例入口
-- 常见问题排查（代理配置、鉴权失败、未确认订单、Bridge dry-run）
-
 ## 核心能力
 
 - 鉴权与凭证：
