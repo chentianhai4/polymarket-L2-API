@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Polymarket MCP 手工联调台</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <h1>Polymarket MCP 手工联调台</h1>
+      <div id="statusBar" class="status-bar">初始化中...</div>
+    </header>
+
+    <main class="layout">
+      <section class="panel env-panel">
+        <h2>环境信息（明文）</h2>
+        <pre id="envView" class="json-box">加载中...</pre>
+      </section>
+
+      <section class="panel controls-panel">
+        <div class="actions">
+          <button id="refreshBtn" type="button">刷新配置</button>
+          <button id="runAllBtn" type="button">Run All (14 Tools)</button>
+          <label class="checkbox-inline">
+            <input id="allowLiveToggle" type="checkbox" />
+            允许真实交易调用（allowLive=true）
+          </label>
+        </div>
+        <div id="summaryBar" class="summary-bar"></div>
+      </section>
+
+      <section class="panel tools-panel">
+        <h2>工具列表</h2>
+        <div id="toolsContainer" class="tools-grid"></div>
+      </section>
+
+      <section class="panel response-panel">
+        <h2>本次响应</h2>
+        <pre id="responseView" class="json-box">等待调用...</pre>
+      </section>
+
+      <section class="panel history-panel">
+        <h2>会话历史（内存）</h2>
+        <div id="historyList" class="history-list"></div>
+      </section>
+    </main>
+
+    <script src="/app.js" type="module"></script>
+  </body>
+  </html>

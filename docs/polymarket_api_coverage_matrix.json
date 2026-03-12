@@ -1,0 +1,1890 @@
+{
+  "metadata": {
+    "generatedAt": "2026-03-02T05:23:57.162Z",
+    "docsHost": "https://docs.polymarket.com",
+    "introUrl": "https://docs.polymarket.com/api-reference/introduction",
+    "sitemapUrl": "https://docs.polymarket.com/sitemap.xml",
+    "latestDocDate": "2026-03-02T00:16:03.090Z",
+    "baselineDate": "2026-02-28",
+    "categoryCount": 17,
+    "endpointCount": 82,
+    "mcpToolCount": 32,
+    "mcpTools": [
+      "pm_auth_bootstrap",
+      "pm_auth_validate",
+      "pm_balance_get",
+      "pm_bridge_deposit_create",
+      "pm_bridge_quote_get",
+      "pm_bridge_status_get",
+      "pm_bridge_supported_assets_get",
+      "pm_bridge_withdraw_create",
+      "pm_builder_analytics_get",
+      "pm_comments_get",
+      "pm_events_get",
+      "pm_leaderboard_get",
+      "pm_market_data_batch_get",
+      "pm_market_discover",
+      "pm_metrics_snapshot",
+      "pm_order_batch_place",
+      "pm_order_cancel",
+      "pm_order_cancel_all",
+      "pm_order_place",
+      "pm_precheck_order",
+      "pm_profile_get",
+      "pm_quote_get",
+      "pm_series_get",
+      "pm_sports_meta_get",
+      "pm_sync_orders",
+      "pm_sync_positions",
+      "pm_sync_trades",
+      "pm_tags_get",
+      "pm_trade_meta_get",
+      "pm_ws_poll",
+      "pm_ws_subscribe",
+      "pm_ws_unsubscribe"
+    ],
+    "statusEnum": [
+      "FULL",
+      "COMPOSITE",
+      "INTERNAL_ONLY",
+      "MISSING"
+    ],
+    "coverageFormula": {
+      "callable": "(FULL + COMPOSITE) / total",
+      "internal": "(FULL + COMPOSITE + INTERNAL_ONLY) / total"
+    }
+  },
+  "summary": {
+    "total": 82,
+    "callableCovered": 73,
+    "internalCovered": 78,
+    "callableCoverage": 0.890244,
+    "internalCoverage": 0.95122
+  },
+  "categories": [
+    {
+      "name": "Events",
+      "total": 4,
+      "callableCovered": 4,
+      "internalCovered": 4,
+      "callableCoverage": 1,
+      "internalCoverage": 1,
+      "endpoints": [
+        {
+          "category": "Events",
+          "slug": "api-reference/events/get-event-by-id",
+          "endpointName": "Get event by id",
+          "docUrl": "https://docs.polymarket.com/api-reference/events/get-event-by-id",
+          "method": "GET",
+          "path": "/events/{id}",
+          "spec": "api-spec/gamma-openapi.yaml",
+          "openapiDescriptor": "api-spec/gamma-openapi.yaml get /events/{id}",
+          "lastmod": "2026-03-02T00:16:02.141Z",
+          "callableStatus": "FULL",
+          "internalStatus": "FULL",
+          "callableEvidence": [
+            "src/openclaw/polymarket/mcp/tools.mjs::pm_events_get"
+          ],
+          "internalEvidence": [
+            "src/openclaw/polymarket/clients/gammaClient.mjs"
+          ],
+          "gapNote": "Directly callable via MCP tool."
+        },
+        {
+          "category": "Events",
+          "slug": "api-reference/events/get-event-by-slug",
+          "endpointName": "Get event by slug",
+          "docUrl": "https://docs.polymarket.com/api-reference/events/get-event-by-slug",
+          "method": "GET",
+          "path": "/events/slug/{slug}",
+          "spec": "api-spec/gamma-openapi.yaml",
+          "openapiDescriptor": "api-spec/gamma-openapi.yaml get /events/slug/{slug}",
+          "lastmod": "2026-03-02T00:16:02.155Z",
+          "callableStatus": "FULL",
+          "internalStatus": "FULL",
+          "callableEvidence": [
+            "src/openclaw/polymarket/mcp/tools.mjs::pm_events_get"
+          ],
+          "internalEvidence": [
+            "src/openclaw/polymarket/clients/gammaClient.mjs"
+          ],
+          "gapNote": "Directly callable via MCP tool."
+        },
+        {
+          "category": "Events",
+          "slug": "api-reference/events/get-event-tags",
+          "endpointName": "Get event tags",
+          "docUrl": "https://docs.polymarket.com/api-reference/events/get-event-tags",
+          "method": "GET",
+          "path": "/events/{id}/tags",
+          "spec": "api-spec/gamma-openapi.yaml",
+          "openapiDescriptor": "api-spec/gamma-openapi.yaml get /events/{id}/tags",
+          "lastmod": "2026-03-02T00:16:02.170Z",
+          "callableStatus": "FULL",
+          "internalStatus": "FULL",
+          "callableEvidence": [
+            "src/openclaw/polymarket/mcp/tools.mjs::pm_events_get"
+          ],
+          "internalEvidence": [
+            "src/openclaw/polymarket/clients/gammaClient.mjs"
+          ],
+          "gapNote": "Directly callable via MCP tool."
+        },
+        {
+          "category": "Events",
+          "slug": "api-reference/events/list-events",
+          "endpointName": "List events",
+          "docUrl": "https://docs.polymarket.com/api-reference/events/list-events",
+          "method": "GET",
+          "path": "/events",
+          "spec": "api-spec/gamma-openapi.yaml",
+          "openapiDescriptor": "api-spec/gamma-openapi.yaml get /events",
+          "lastmod": "2026-03-02T00:16:02.127Z",
+          "callableStatus": "FULL",
+          "internalStatus": "FULL",
+          "callableEvidence": [
+            "src/openclaw/polymarket/mcp/tools.mjs::pm_events_get"
+          ],
+          "internalEvidence": [
+            "src/openclaw/polymarket/clients/gammaClient.mjs"
+          ],
+          "gapNote": "Directly callable via MCP tool."
+        }
+      ]
+    },
+    {
+      "name": "Markets",
+      "total": 7,
+      "callableCovered": 4,
+      "internalCovered": 5,
+      "callableCoverage": 0.571429,
+      "internalCoverage": 0.714286,
+      "endpoints": [
+        {
+          "category": "Markets",
+          "slug": "api-reference/core/get-top-holders-for-markets",
+          "endpointName": "Get top holders for markets",
+          "docUrl": "https://docs.polymarket.com/api-reference/core/get-top-holders-for-markets",
+          "method": "GET",
+          "path": "/holders",
+          "spec": "api-spec/data-openapi.yaml",
+          "openapiDescriptor": "api-spec/data-openapi.yaml get /holders",
+          "lastmod": "2026-03-02T00:16:02.250Z",
+          "callableStatus": "INTERNAL_ONLY",
+          "internalStatus": "FULL",
+          "callableEvidence": [
+            "No direct MCP tool exposure in src/openclaw/polymarket/mcp/tools.mjs"
+          ],
+          "internalEvidence": [
+            "src/openclaw/polymarket/clients/dataApiClient.mjs",
+            "src/openclaw/polymarket/clients/clobService.mjs"
+          ],
+          "gapNote": "Implemented internally but not exposed as MCP tool."
+        },
+        {
+          "category": "Markets",
+          "slug": "api-reference/markets/get-market-by-id",
+          "endpointName": "Get market by id",
+          "docUrl": "https://docs.polymarket.com/api-reference/markets/get-market-by-id",
+          "method": "GET",
+          "path": "/markets/{id}",
+          "spec": "api-spec/gamma-openapi.yaml",
+          "openapiDescriptor": "api-spec/gamma-openapi.yaml get /markets/{id}",
+          "lastmod": "2026-03-02T00:16:02.206Z",
+          "callableStatus": "COMPOSITE",
+          "internalStatus": "COMPOSITE",
+          "callableEvidence": [],
+          "internalEvidence": [
+            "src/openclaw/polymarket/clients/gammaClient.mjs",
+            "src/openclaw/polymarket/clients/clobService.mjs"
+          ],
+          "gapNote": "Callable via composed MCP workflow (no dedicated 1:1 tool)."
+        },
+        {
+          "category": "Markets",
+          "slug": "api-reference/markets/get-market-by-slug",
+          "endpointName": "Get market by slug",
+          "docUrl": "https://docs.polymarket.com/api-reference/markets/get-market-by-slug",
+          "method": "GET",
+          "path": "/markets/slug/{slug}",
+          "spec": "api-spec/gamma-openapi.yaml",
+          "openapiDescriptor": "api-spec/gamma-openapi.yaml get /markets/slug/{slug}",
+          "lastmod": "2026-03-02T00:16:02.220Z",
+          "callableStatus": "COMPOSITE",
+          "internalStatus": "COMPOSITE",
+          "callableEvidence": [],
+          "internalEvidence": [
+            "src/openclaw/polymarket/clients/gammaClient.mjs",
+            "src/openclaw/polymarket/clients/clobService.mjs"
+          ],
+          "gapNote": "Callable via composed MCP workflow (no dedicated 1:1 tool)."
+        },
+        {
+          "category": "Markets",
+          "slug": "api-reference/markets/get-market-tags-by-id",
+          "endpointName": "Get market tags by id",
+          "docUrl": "https://docs.polymarket.com/api-reference/markets/get-market-tags-by-id",
+          "method": "GET",
+          "path": "/markets/{id}/tags",
+          "spec": "api-spec/gamma-openapi.yaml",
+          "openapiDescriptor": "api-spec/gamma-openapi.yaml get /markets/{id}/tags",
+          "lastmod": "2026-03-02T00:16:02.234Z",
+          "callableStatus": "COMPOSITE",
+          "internalStatus": "COMPOSITE",
+          "callableEvidence": [],
+          "internalEvidence": [
+            "src/openclaw/polymarket/clients/gammaClient.mjs",
+            "src/openclaw/polymarket/clients/clobService.mjs"
+          ],
+          "gapNote": "Callable via composed MCP workflow (no dedicated 1:1 tool)."
+        },
+        {
+          "category": "Markets",
+          "slug": "api-reference/markets/list-markets",
+          "endpointName": "List markets",
+          "docUrl": "https://docs.polymarket.com/api-reference/markets/list-markets",
+          "method": "GET",
+          "path": "/markets",
+          "spec": "api-spec/gamma-openapi.yaml",
+          "openapiDescriptor": "api-spec/gamma-openapi.yaml get /markets",
+          "lastmod": "2026-03-02T00:16:02.185Z",
+          "callableStatus": "FULL",
+          "internalStatus": "FULL",
+          "callableEvidence": [
+            "src/openclaw/polymarket/mcp/tools.mjs::pm_market_discover"
+          ],
+          "internalEvidence": [
+            "src/openclaw/polymarket/clients/gammaClient.mjs",
+            "src/openclaw/polymarket/clients/clobService.mjs"
+          ],
+          "gapNote": "Directly callable via MCP tool."
+        },
+        {
+          "category": "Markets",
+          "slug": "api-reference/misc/get-live-volume-for-an-event",
+          "endpointName": "Get live volume for an event",
+          "docUrl": "https://docs.polymarket.com/api-reference/misc/get-live-volume-for-an-event",
+          "method": "GET",
+          "path": "/live-volume",
+          "spec": "api-spec/data-openapi.yaml",
+          "openapiDescriptor": "api-spec/data-openapi.yaml get /live-volume",
+          "lastmod": "2026-03-02T00:16:02.277Z",
+          "callableStatus": "MISSING",
+          "internalStatus": "MISSING",
+          "callableEvidence": [],
+          "internalEvidence": [
+            "src/openclaw/polymarket/clients/dataApiClient.mjs"
+          ],
+          "gapNote": "No implementation found in current gateway/clients."
+        },
+        {
+          "category": "Markets",
+          "slug": "api-reference/misc/get-open-interest",
+          "endpointName": "Get open interest",
+          "docUrl": "https://docs.polymarket.com/api-reference/misc/get-open-interest",
+          "method": "GET",
+          "path": "/oi",
+          "spec": "api-spec/data-openapi.yaml",
+          "openapiDescriptor": "api-spec/data-openapi.yaml get /oi",
+          "lastmod": "2026-03-02T00:16:02.264Z",
+          "callableStatus": "MISSING",
+          "internalStatus": "MISSING",
+          "callableEvidence": [],
+          "internalEvidence": [
+            "src/openclaw/polymarket/clients/dataApiClient.mjs"
+          ],
+          "gapNote": "No implementation found in current gateway/clients."
+        }
+      ]
+    },
+    {
+      "name": "Orderbook & Pricing",
+      "total": 19,
+      "callableCovered": 19,
+      "internalCovered": 19,
+      "callableCoverage": 1,
+      "internalCoverage": 1,
+      "endpoints": [
+        {
+          "category": "Orderbook & Pricing",
+          "slug": "api-reference/data/get-midpoint-price",
+          "endpointName": "Get midpoint price",
+          "docUrl": "https://docs.polymarket.com/api-reference/data/get-midpoint-price",
+          "method": "GET",
+          "path": "/midpoint",
+          "spec": "api-spec/clob-openapi.yaml",
+          "openapiDescriptor": "api-spec/clob-openapi.yaml get /midpoint",
+          "lastmod": "2026-02-27T18:34:19.691Z",
+          "callableStatus": "FULL",
+          "internalStatus": "FULL",
+          "callableEvidence": [
+            "src/openclaw/polymarket/mcp/tools.mjs::pm_quote_get"
+          ],
+          "internalEvidence": [
+            "src/openclaw/polymarket/clients/clobService.mjs"
+          ],
+          "gapNote": "Directly callable via MCP tool."
+        },
+        {
+          "category": "Orderbook & Pricing",
+          "slug": "api-reference/data/get-server-time",
+          "endpointName": "Get server time",
+          "docUrl": "https://docs.polymarket.com/api-reference/data/get-server-time",
+          "method": "GET",
+          "path": "/time",
+          "spec": "api-spec/clob-openapi.yaml",
+          "openapiDescriptor": "api-spec/clob-openapi.yaml get /time",
+          "lastmod": "2026-02-27T18:34:20.043Z",
+          "callableStatus": "FULL",
+          "internalStatus": "FULL",
+          "callableEvidence": [
+            "src/openclaw/polymarket/mcp/tools.mjs::pm_trade_meta_get"
+          ],
+          "internalEvidence": [
+            "src/openclaw/polymarket/clients/clobService.mjs"
+          ],
+          "gapNote": "Directly callable via MCP tool."
+        },
+        {
+          "category": "Orderbook & Pricing",
+          "slug": "api-reference/market-data/get-fee-rate",
+          "endpointName": "Get fee rate",
+          "docUrl": "https://docs.polymarket.com/api-reference/market-data/get-fee-rate",
+          "method": "GET",
+          "path": "/fee-rate",
+          "spec": "api-spec/clob-openapi.yaml",
+          "openapiDescriptor": "api-spec/clob-openapi.yaml get /fee-rate",
+          "lastmod": "2026-02-27T18:34:19.816Z",
+          "callableStatus": "FULL",
+          "internalStatus": "FULL",
+          "callableEvidence": [
+            "src/openclaw/polymarket/mcp/tools.mjs::pm_quote_get"
+          ],
+          "internalEvidence": [
+            "src/openclaw/polymarket/clients/clobService.mjs"
+          ],
+          "gapNote": "Directly callable via MCP tool."
+        },
+        {
+          "category": "Orderbook & Pricing",
+          "slug": "api-reference/market-data/get-fee-rate-by-path-parameter",
+          "endpointName": "Get fee rate by path parameter",
+          "docUrl": "https://docs.polymarket.com/api-reference/market-data/get-fee-rate-by-path-parameter",
+          "method": "GET",
+          "path": "/fee-rate/{token_id}",
+          "spec": "api-spec/clob-openapi.yaml",
+          "openapiDescriptor": "api-spec/clob-openapi.yaml get /fee-rate/{token_id}",
+          "lastmod": "2026-02-27T18:34:19.865Z",
+          "callableStatus": "FULL",
+          "internalStatus": "FULL",
+          "callableEvidence": [
+            "src/openclaw/polymarket/mcp/tools.mjs::pm_quote_get"
+          ],
+          "internalEvidence": [
+            "src/openclaw/polymarket/clients/clobService.mjs"
+          ],
+          "gapNote": "Directly callable via MCP tool."
+        },
+        {
+          "category": "Orderbook & Pricing",
+          "slug": "api-reference/market-data/get-last-trade-price",
+          "endpointName": "Get last trade price",
+          "docUrl": "https://docs.polymarket.com/api-reference/market-data/get-last-trade-price",
+          "method": "GET",
+          "path": "/last-trade-price",
+          "spec": "api-spec/clob-openapi.yaml",
+          "openapiDescriptor": "api-spec/clob-openapi.yaml get /last-trade-price",
+          "lastmod": "2026-02-27T18:34:19.753Z",
+          "callableStatus": "FULL",
+          "internalStatus": "FULL",
+          "callableEvidence": [
+            "src/openclaw/polymarket/mcp/tools.mjs::pm_trade_meta_get"
+          ],
+          "internalEvidence": [
+            "src/openclaw/polymarket/clients/clobService.mjs"
+          ],
+          "gapNote": "Directly callable via MCP tool."
+        },
+        {
+          "category": "Orderbook & Pricing",
+          "slug": "api-reference/market-data/get-last-trade-prices-query-parameters",
+          "endpointName": "Get last trade prices (query parameters)",
+          "docUrl": "https://docs.polymarket.com/api-reference/market-data/get-last-trade-prices-query-parameters",
+          "method": "GET",
+          "path": "/last-trades-prices",
+          "spec": "api-spec/clob-openapi.yaml",
+          "openapiDescriptor": "api-spec/clob-openapi.yaml get /last-trades-prices",
+          "lastmod": "2026-02-27T18:34:19.765Z",
+          "callableStatus": "FULL",
+          "internalStatus": "FULL",
+          "callableEvidence": [
+            "src/openclaw/polymarket/mcp/tools.mjs::pm_trade_meta_get"
+          ],
+          "internalEvidence": [
+            "src/openclaw/polymarket/clients/clobService.mjs"
+          ],
+          "gapNote": "Directly callable via MCP tool."
+        },
+        {
+          "category": "Orderbook & Pricing",
+          "slug": "api-reference/market-data/get-last-trade-prices-request-body",
+          "endpointName": "Get last trade prices (request body)",
+          "docUrl": "https://docs.polymarket.com/api-reference/market-data/get-last-trade-prices-request-body",
+          "method": "POST",
+          "path": "/last-trades-prices",
+          "spec": "api-spec/clob-openapi.yaml",
+          "openapiDescriptor": "api-spec/clob-openapi.yaml post /last-trades-prices",
+          "lastmod": "2026-02-27T18:34:19.778Z",
+          "callableStatus": "FULL",
+          "internalStatus": "FULL",
+          "callableEvidence": [
+            "src/openclaw/polymarket/mcp/tools.mjs::pm_trade_meta_get"
+          ],
+          "internalEvidence": [
+            "src/openclaw/polymarket/clients/clobService.mjs"
+          ],
+          "gapNote": "Directly callable via MCP tool."
+        },
+        {
+          "category": "Orderbook & Pricing",
+          "slug": "api-reference/market-data/get-market-price",
+          "endpointName": "Get market price",
+          "docUrl": "https://docs.polymarket.com/api-reference/market-data/get-market-price",
+          "method": "GET",
+          "path": "/price",
+          "spec": "api-spec/clob-openapi.yaml",
+          "openapiDescriptor": "api-spec/clob-openapi.yaml get /price",
+          "lastmod": "2026-02-27T18:34:19.654Z",
+          "callableStatus": "FULL",
+          "internalStatus": "FULL",
+          "callableEvidence": [
+            "src/openclaw/polymarket/mcp/tools.mjs::pm_quote_get"
+          ],
+          "internalEvidence": [
+            "src/openclaw/polymarket/clients/clobService.mjs"
+          ],
+          "gapNote": "Directly callable via MCP tool."
+        },
+        {
+          "category": "Orderbook & Pricing",
+          "slug": "api-reference/market-data/get-market-prices-query-parameters",
+          "endpointName": "Get market prices (query parameters)",
+          "docUrl": "https://docs.polymarket.com/api-reference/market-data/get-market-prices-query-parameters",
+          "method": "GET",
+          "path": "/prices",
+          "spec": "api-spec/clob-openapi.yaml",
+          "openapiDescriptor": "api-spec/clob-openapi.yaml get /prices",
+          "lastmod": "2026-02-27T18:34:19.666Z",
+          "callableStatus": "FULL",
+          "internalStatus": "FULL",
+          "callableEvidence": [
+            "src/openclaw/polymarket/mcp/tools.mjs::pm_market_data_batch_get"
+          ],
+          "internalEvidence": [
+            "src/openclaw/polymarket/clients/clobService.mjs"
+          ],
+          "gapNote": "Directly callable via MCP tool."
+        },
+        {
+          "category": "Orderbook & Pricing",
+          "slug": "api-reference/market-data/get-market-prices-request-body",
+          "endpointName": "Get market prices (request body)",
+          "docUrl": "https://docs.polymarket.com/api-reference/market-data/get-market-prices-request-body",
+          "method": "POST",
+          "path": "/prices",
+          "spec": "api-spec/clob-openapi.yaml",
+          "openapiDescriptor": "api-spec/clob-openapi.yaml post /prices",
+          "lastmod": "2026-02-27T18:34:19.679Z",
+          "callableStatus": "FULL",
+          "internalStatus": "FULL",
+          "callableEvidence": [
+            "src/openclaw/polymarket/mcp/tools.mjs::pm_market_data_batch_get"
+          ],
+          "internalEvidence": [
+            "src/openclaw/polymarket/clients/clobService.mjs"
+          ],
+          "gapNote": "Directly callable via MCP tool."
+        },
+        {
+          "category": "Orderbook & Pricing",
+          "slug": "api-reference/market-data/get-midpoint-prices-query-parameters",
+          "endpointName": "Get midpoint prices (query parameters)",
+          "docUrl": "https://docs.polymarket.com/api-reference/market-data/get-midpoint-prices-query-parameters",
+          "method": "GET",
+          "path": "/midpoints",
+          "spec": "api-spec/clob-openapi.yaml",
+          "openapiDescriptor": "api-spec/clob-openapi.yaml get /midpoints",
+          "lastmod": "2026-02-27T18:34:19.703Z",
+          "callableStatus": "FULL",
+          "internalStatus": "FULL",
+          "callableEvidence": [
+            "src/openclaw/polymarket/mcp/tools.mjs::pm_market_data_batch_get"
+          ],
+          "internalEvidence": [
+            "src/openclaw/polymarket/clients/clobService.mjs"
+          ],
+          "gapNote": "Directly callable via MCP tool."
+        },
+        {
+          "category": "Orderbook & Pricing",
+          "slug": "api-reference/market-data/get-midpoint-prices-request-body",
+          "endpointName": "Get midpoint prices (request body)",
+          "docUrl": "https://docs.polymarket.com/api-reference/market-data/get-midpoint-prices-request-body",
+          "method": "POST",
+          "path": "/midpoints",
+          "spec": "api-spec/clob-openapi.yaml",
+          "openapiDescriptor": "api-spec/clob-openapi.yaml post /midpoints",
+          "lastmod": "2026-02-27T18:34:19.715Z",
+          "callableStatus": "FULL",
+          "internalStatus": "FULL",
+          "callableEvidence": [
+            "src/openclaw/polymarket/mcp/tools.mjs::pm_market_data_batch_get"
+          ],
+          "internalEvidence": [
+            "src/openclaw/polymarket/clients/clobService.mjs"
+          ],
+          "gapNote": "Directly callable via MCP tool."
+        },
+        {
+          "category": "Orderbook & Pricing",
+          "slug": "api-reference/market-data/get-order-book",
+          "endpointName": "Get order book",
+          "docUrl": "https://docs.polymarket.com/api-reference/market-data/get-order-book",
+          "method": "GET",
+          "path": "/book",
+          "spec": "api-spec/clob-openapi.yaml",
+          "openapiDescriptor": "api-spec/clob-openapi.yaml get /book",
+          "lastmod": "2026-02-27T18:34:19.630Z",
+          "callableStatus": "FULL",
+          "internalStatus": "FULL",
+          "callableEvidence": [
+            "src/openclaw/polymarket/mcp/tools.mjs::pm_quote_get"
+          ],
+          "internalEvidence": [
+            "src/openclaw/polymarket/clients/clobService.mjs"
+          ],
+          "gapNote": "Directly callable via MCP tool."
+        },
+        {
+          "category": "Orderbook & Pricing",
+          "slug": "api-reference/market-data/get-order-books-request-body",
+          "endpointName": "Get order books (request body)",
+          "docUrl": "https://docs.polymarket.com/api-reference/market-data/get-order-books-request-body",
+          "method": "POST",
+          "path": "/books",
+          "spec": "api-spec/clob-openapi.yaml",
+          "openapiDescriptor": "api-spec/clob-openapi.yaml post /books",
+          "lastmod": "2026-02-27T18:34:19.642Z",
+          "callableStatus": "FULL",
+          "internalStatus": "FULL",
+          "callableEvidence": [
+            "src/openclaw/polymarket/mcp/tools.mjs::pm_market_data_batch_get"
+          ],
+          "internalEvidence": [
+            "src/openclaw/polymarket/clients/clobService.mjs"
+          ],
+          "gapNote": "Directly callable via MCP tool."
+        },
+        {
+          "category": "Orderbook & Pricing",
+          "slug": "api-reference/market-data/get-spread",
+          "endpointName": "Get spread",
+          "docUrl": "https://docs.polymarket.com/api-reference/market-data/get-spread",
+          "method": "GET",
+          "path": "/spread",
+          "spec": "api-spec/clob-openapi.yaml",
+          "openapiDescriptor": "api-spec/clob-openapi.yaml get /spread",
+          "lastmod": "2026-02-27T18:34:19.728Z",
+          "callableStatus": "FULL",
+          "internalStatus": "FULL",
+          "callableEvidence": [
+            "src/openclaw/polymarket/mcp/tools.mjs::pm_quote_get"
+          ],
+          "internalEvidence": [
+            "src/openclaw/polymarket/clients/clobService.mjs"
+          ],
+          "gapNote": "Directly callable via MCP tool."
+        },
+        {
+          "category": "Orderbook & Pricing",
+          "slug": "api-reference/market-data/get-spreads",
+          "endpointName": "Get spreads",
+          "docUrl": "https://docs.polymarket.com/api-reference/market-data/get-spreads",
+          "method": "POST",
+          "path": "/spreads",
+          "spec": "api-spec/clob-openapi.yaml",
+          "openapiDescriptor": "api-spec/clob-openapi.yaml post /spreads",
+          "lastmod": "2026-02-27T18:34:19.740Z",
+          "callableStatus": "FULL",
+          "internalStatus": "FULL",
+          "callableEvidence": [
+            "src/openclaw/polymarket/mcp/tools.mjs::pm_market_data_batch_get"
+          ],
+          "internalEvidence": [
+            "src/openclaw/polymarket/clients/clobService.mjs"
+          ],
+          "gapNote": "Directly callable via MCP tool."
+        },
+        {
+          "category": "Orderbook & Pricing",
+          "slug": "api-reference/market-data/get-tick-size",
+          "endpointName": "Get tick size",
+          "docUrl": "https://docs.polymarket.com/api-reference/market-data/get-tick-size",
+          "method": "GET",
+          "path": "/tick-size",
+          "spec": "api-spec/clob-openapi.yaml",
+          "openapiDescriptor": "api-spec/clob-openapi.yaml get /tick-size",
+          "lastmod": "2026-02-27T18:34:19.917Z",
+          "callableStatus": "FULL",
+          "internalStatus": "FULL",
+          "callableEvidence": [
+            "src/openclaw/polymarket/mcp/tools.mjs::pm_quote_get"
+          ],
+          "internalEvidence": [
+            "src/openclaw/polymarket/clients/clobService.mjs"
+          ],
+          "gapNote": "Directly callable via MCP tool."
+        },
+        {
+          "category": "Orderbook & Pricing",
+          "slug": "api-reference/market-data/get-tick-size-by-path-parameter",
+          "endpointName": "Get tick size by path parameter",
+          "docUrl": "https://docs.polymarket.com/api-reference/market-data/get-tick-size-by-path-parameter",
+          "method": "GET",
+          "path": "/tick-size/{token_id}",
+          "spec": "api-spec/clob-openapi.yaml",
+          "openapiDescriptor": "api-spec/clob-openapi.yaml get /tick-size/{token_id}",
+          "lastmod": "2026-02-27T18:34:19.981Z",
+          "callableStatus": "FULL",
+          "internalStatus": "FULL",
+          "callableEvidence": [
+            "src/openclaw/polymarket/mcp/tools.mjs::pm_quote_get"
+          ],
+          "internalEvidence": [
+            "src/openclaw/polymarket/clients/clobService.mjs"
+          ],
+          "gapNote": "Directly callable via MCP tool."
+        },
+        {
+          "category": "Orderbook & Pricing",
+          "slug": "api-reference/markets/get-prices-history",
+          "endpointName": "Get prices history",
+          "docUrl": "https://docs.polymarket.com/api-reference/markets/get-prices-history",
+          "method": "GET",
+          "path": "/prices-history",
+          "spec": "api-spec/clob-openapi.yaml",
+          "openapiDescriptor": "api-spec/clob-openapi.yaml get /prices-history",
+          "lastmod": "2026-02-27T18:34:19.791Z",
+          "callableStatus": "FULL",
+          "internalStatus": "FULL",
+          "callableEvidence": [
+            "src/openclaw/polymarket/mcp/tools.mjs::pm_trade_meta_get"
+          ],
+          "internalEvidence": [
+            "src/openclaw/polymarket/clients/gammaClient.mjs",
+            "src/openclaw/polymarket/clients/clobService.mjs"
+          ],
+          "gapNote": "Directly callable via MCP tool."
+        }
+      ]
+    },
+    {
+      "name": "Orders",
+      "total": 10,
+      "callableCovered": 10,
+      "internalCovered": 10,
+      "callableCoverage": 1,
+      "internalCoverage": 1,
+      "endpoints": [
+        {
+          "category": "Orders",
+          "slug": "api-reference/trade/cancel-all-orders",
+          "endpointName": "Cancel all orders",
+          "docUrl": "https://docs.polymarket.com/api-reference/trade/cancel-all-orders",
+          "method": "DELETE",
+          "path": "/cancel-all",
+          "spec": "api-spec/clob-openapi.yaml",
+          "openapiDescriptor": "api-spec/clob-openapi.yaml delete /cancel-all",
+          "lastmod": "2026-02-27T18:34:20.358Z",
+          "callableStatus": "FULL",
+          "internalStatus": "FULL",
+          "callableEvidence": [
+            "src/openclaw/polymarket/mcp/tools.mjs::pm_order_cancel_all"
+          ],
+          "internalEvidence": [
+            "src/openclaw/polymarket/clients/clobService.mjs"
+          ],
+          "gapNote": "Directly callable via MCP tool."
+        },
+        {
+          "category": "Orders",
+          "slug": "api-reference/trade/cancel-multiple-orders",
+          "endpointName": "Cancel multiple orders",
+          "docUrl": "https://docs.polymarket.com/api-reference/trade/cancel-multiple-orders",
+          "method": "DELETE",
+          "path": "/orders",
+          "spec": "api-spec/clob-openapi.yaml",
+          "openapiDescriptor": "api-spec/clob-openapi.yaml delete /orders",
+          "lastmod": "2026-02-27T18:34:20.344Z",
+          "callableStatus": "FULL",
+          "internalStatus": "FULL",
+          "callableEvidence": [
+            "src/openclaw/polymarket/mcp/tools.mjs::pm_order_cancel"
+          ],
+          "internalEvidence": [
+            "src/openclaw/polymarket/clients/clobService.mjs"
+          ],
+          "gapNote": "Directly callable via MCP tool."
+        },
+        {
+          "category": "Orders",
+          "slug": "api-reference/trade/cancel-orders-for-a-market",
+          "endpointName": "Cancel orders for a market",
+          "docUrl": "https://docs.polymarket.com/api-reference/trade/cancel-orders-for-a-market",
+          "method": "DELETE",
+          "path": "/cancel-market-orders",
+          "spec": "api-spec/clob-openapi.yaml",
+          "openapiDescriptor": "api-spec/clob-openapi.yaml delete /cancel-market-orders",
+          "lastmod": "2026-02-27T18:34:20.371Z",
+          "callableStatus": "FULL",
+          "internalStatus": "FULL",
+          "callableEvidence": [
+            "src/openclaw/polymarket/mcp/tools.mjs::pm_order_cancel"
+          ],
+          "internalEvidence": [
+            "src/openclaw/polymarket/clients/clobService.mjs"
+          ],
+          "gapNote": "Directly callable via MCP tool."
+        },
+        {
+          "category": "Orders",
+          "slug": "api-reference/trade/cancel-single-order",
+          "endpointName": "Cancel single order",
+          "docUrl": "https://docs.polymarket.com/api-reference/trade/cancel-single-order",
+          "method": "DELETE",
+          "path": "/order",
+          "spec": "api-spec/clob-openapi.yaml",
+          "openapiDescriptor": "api-spec/clob-openapi.yaml delete /order",
+          "lastmod": "2026-02-27T18:34:20.120Z",
+          "callableStatus": "FULL",
+          "internalStatus": "FULL",
+          "callableEvidence": [
+            "src/openclaw/polymarket/mcp/tools.mjs::pm_order_cancel"
+          ],
+          "internalEvidence": [
+            "src/openclaw/polymarket/clients/clobService.mjs"
+          ],
+          "gapNote": "Directly callable via MCP tool."
+        },
+        {
+          "category": "Orders",
+          "slug": "api-reference/trade/get-order-scoring-status",
+          "endpointName": "Get order scoring status",
+          "docUrl": "https://docs.polymarket.com/api-reference/trade/get-order-scoring-status",
+          "method": "GET",
+          "path": "/order-scoring",
+          "spec": "api-spec/clob-openapi.yaml",
+          "openapiDescriptor": "api-spec/clob-openapi.yaml get /order-scoring",
+          "lastmod": "2026-02-27T18:34:20.383Z",
+          "callableStatus": "FULL",
+          "internalStatus": "FULL",
+          "callableEvidence": [
+            "src/openclaw/polymarket/mcp/tools.mjs::pm_trade_meta_get"
+          ],
+          "internalEvidence": [
+            "src/openclaw/polymarket/clients/clobService.mjs"
+          ],
+          "gapNote": "Directly callable via MCP tool."
+        },
+        {
+          "category": "Orders",
+          "slug": "api-reference/trade/get-single-order-by-id",
+          "endpointName": "Get single order by ID",
+          "docUrl": "https://docs.polymarket.com/api-reference/trade/get-single-order-by-id",
+          "method": "GET",
+          "path": "/order/{orderID}",
+          "spec": "api-spec/clob-openapi.yaml",
+          "openapiDescriptor": "api-spec/clob-openapi.yaml get /order/{orderID}",
+          "lastmod": "2026-02-27T18:34:20.244Z",
+          "callableStatus": "COMPOSITE",
+          "internalStatus": "FULL",
+          "callableEvidence": [],
+          "internalEvidence": [
+            "src/openclaw/polymarket/clients/clobService.mjs"
+          ],
+          "gapNote": "Callable via composed MCP workflow (no dedicated 1:1 tool)."
+        },
+        {
+          "category": "Orders",
+          "slug": "api-reference/trade/get-user-orders",
+          "endpointName": "Get user orders",
+          "docUrl": "https://docs.polymarket.com/api-reference/trade/get-user-orders",
+          "method": "GET",
+          "path": "/orders",
+          "spec": "api-spec/clob-openapi.yaml",
+          "openapiDescriptor": "api-spec/clob-openapi.yaml get /orders",
+          "lastmod": "2026-02-27T18:34:20.322Z",
+          "callableStatus": "FULL",
+          "internalStatus": "FULL",
+          "callableEvidence": [
+            "src/openclaw/polymarket/mcp/tools.mjs::pm_sync_orders"
+          ],
+          "internalEvidence": [
+            "src/openclaw/polymarket/clients/clobService.mjs"
+          ],
+          "gapNote": "Directly callable via MCP tool."
+        },
+        {
+          "category": "Orders",
+          "slug": "api-reference/trade/post-a-new-order",
+          "endpointName": "Post a new order",
+          "docUrl": "https://docs.polymarket.com/api-reference/trade/post-a-new-order",
+          "method": "POST",
+          "path": "/order",
+          "spec": "api-spec/clob-openapi.yaml",
+          "openapiDescriptor": "api-spec/clob-openapi.yaml post /order",
+          "lastmod": "2026-02-27T18:34:20.085Z",
+          "callableStatus": "FULL",
+          "internalStatus": "FULL",
+          "callableEvidence": [
+            "src/openclaw/polymarket/mcp/tools.mjs::pm_order_place"
+          ],
+          "internalEvidence": [
+            "src/openclaw/polymarket/clients/clobService.mjs"
+          ],
+          "gapNote": "Directly callable via MCP tool."
+        },
+        {
+          "category": "Orders",
+          "slug": "api-reference/trade/post-multiple-orders",
+          "endpointName": "Post multiple orders",
+          "docUrl": "https://docs.polymarket.com/api-reference/trade/post-multiple-orders",
+          "method": "POST",
+          "path": "/orders",
+          "spec": "api-spec/clob-openapi.yaml",
+          "openapiDescriptor": "api-spec/clob-openapi.yaml post /orders",
+          "lastmod": "2026-02-27T18:34:20.279Z",
+          "callableStatus": "FULL",
+          "internalStatus": "FULL",
+          "callableEvidence": [
+            "src/openclaw/polymarket/mcp/tools.mjs::pm_order_batch_place"
+          ],
+          "internalEvidence": [
+            "src/openclaw/polymarket/clients/clobService.mjs"
+          ],
+          "gapNote": "Directly callable via MCP tool."
+        },
+        {
+          "category": "Orders",
+          "slug": "api-reference/trade/send-heartbeat",
+          "endpointName": "Send heartbeat",
+          "docUrl": "https://docs.polymarket.com/api-reference/trade/send-heartbeat",
+          "method": "POST",
+          "path": "/heartbeats",
+          "spec": "api-spec/clob-openapi.yaml",
+          "openapiDescriptor": "api-spec/clob-openapi.yaml post /heartbeats",
+          "lastmod": "2026-02-27T18:34:20.399Z",
+          "callableStatus": "FULL",
+          "internalStatus": "FULL",
+          "callableEvidence": [
+            "src/openclaw/polymarket/mcp/tools.mjs::pm_trade_meta_get"
+          ],
+          "internalEvidence": [
+            "src/openclaw/polymarket/clients/clobService.mjs"
+          ],
+          "gapNote": "Directly callable via MCP tool."
+        }
+      ]
+    },
+    {
+      "name": "Trades",
+      "total": 2,
+      "callableCovered": 1,
+      "internalCovered": 2,
+      "callableCoverage": 0.5,
+      "internalCoverage": 1,
+      "endpoints": [
+        {
+          "category": "Trades",
+          "slug": "api-reference/trade/get-builder-trades",
+          "endpointName": "Get builder trades",
+          "docUrl": "https://docs.polymarket.com/api-reference/trade/get-builder-trades",
+          "method": "GET",
+          "path": "/builder/trades",
+          "spec": "api-spec/clob-openapi.yaml",
+          "openapiDescriptor": "api-spec/clob-openapi.yaml get /builder/trades",
+          "lastmod": "2026-02-27T18:34:20.423Z",
+          "callableStatus": "INTERNAL_ONLY",
+          "internalStatus": "FULL",
+          "callableEvidence": [
+            "No direct MCP tool exposure in src/openclaw/polymarket/mcp/tools.mjs"
+          ],
+          "internalEvidence": [
+            "src/openclaw/polymarket/clients/clobService.mjs"
+          ],
+          "gapNote": "Implemented internally but not exposed as MCP tool."
+        },
+        {
+          "category": "Trades",
+          "slug": "api-reference/trade/get-trades",
+          "endpointName": "Get trades",
+          "docUrl": "https://docs.polymarket.com/api-reference/trade/get-trades",
+          "method": "GET",
+          "path": "/trades",
+          "spec": "api-spec/clob-openapi.yaml",
+          "openapiDescriptor": "api-spec/clob-openapi.yaml get /trades",
+          "lastmod": "2026-02-27T18:34:20.411Z",
+          "callableStatus": "FULL",
+          "internalStatus": "FULL",
+          "callableEvidence": [
+            "src/openclaw/polymarket/mcp/tools.mjs::pm_sync_trades"
+          ],
+          "internalEvidence": [
+            "src/openclaw/polymarket/clients/clobService.mjs"
+          ],
+          "gapNote": "Directly callable via MCP tool."
+        }
+      ]
+    },
+    {
+      "name": "CLOB Markets",
+      "total": 3,
+      "callableCovered": 0,
+      "internalCovered": 3,
+      "callableCoverage": 0,
+      "internalCoverage": 1,
+      "endpoints": [
+        {
+          "category": "CLOB Markets",
+          "slug": "api-reference/markets/get-sampling-markets",
+          "endpointName": "Get sampling markets",
+          "docUrl": "https://docs.polymarket.com/api-reference/markets/get-sampling-markets",
+          "method": "GET",
+          "path": "/sampling-markets",
+          "spec": "api-spec/clob-openapi.yaml",
+          "openapiDescriptor": "api-spec/clob-openapi.yaml get /sampling-markets",
+          "lastmod": "2026-03-02T00:16:02.584Z",
+          "callableStatus": "INTERNAL_ONLY",
+          "internalStatus": "FULL",
+          "callableEvidence": [
+            "No direct MCP tool exposure in src/openclaw/polymarket/mcp/tools.mjs"
+          ],
+          "internalEvidence": [
+            "src/openclaw/polymarket/clients/gammaClient.mjs",
+            "src/openclaw/polymarket/clients/clobService.mjs"
+          ],
+          "gapNote": "Implemented internally but not exposed as MCP tool."
+        },
+        {
+          "category": "CLOB Markets",
+          "slug": "api-reference/markets/get-sampling-simplified-markets",
+          "endpointName": "Get sampling simplified markets",
+          "docUrl": "https://docs.polymarket.com/api-reference/markets/get-sampling-simplified-markets",
+          "method": "GET",
+          "path": "/sampling-simplified-markets",
+          "spec": "api-spec/clob-openapi.yaml",
+          "openapiDescriptor": "api-spec/clob-openapi.yaml get /sampling-simplified-markets",
+          "lastmod": "2026-03-02T00:16:02.598Z",
+          "callableStatus": "INTERNAL_ONLY",
+          "internalStatus": "FULL",
+          "callableEvidence": [
+            "No direct MCP tool exposure in src/openclaw/polymarket/mcp/tools.mjs"
+          ],
+          "internalEvidence": [
+            "src/openclaw/polymarket/clients/gammaClient.mjs",
+            "src/openclaw/polymarket/clients/clobService.mjs"
+          ],
+          "gapNote": "Implemented internally but not exposed as MCP tool."
+        },
+        {
+          "category": "CLOB Markets",
+          "slug": "api-reference/markets/get-simplified-markets",
+          "endpointName": "Get simplified markets",
+          "docUrl": "https://docs.polymarket.com/api-reference/markets/get-simplified-markets",
+          "method": "GET",
+          "path": "/simplified-markets",
+          "spec": "api-spec/clob-openapi.yaml",
+          "openapiDescriptor": "api-spec/clob-openapi.yaml get /simplified-markets",
+          "lastmod": "2026-03-02T00:16:02.566Z",
+          "callableStatus": "INTERNAL_ONLY",
+          "internalStatus": "FULL",
+          "callableEvidence": [
+            "No direct MCP tool exposure in src/openclaw/polymarket/mcp/tools.mjs"
+          ],
+          "internalEvidence": [
+            "src/openclaw/polymarket/clients/gammaClient.mjs",
+            "src/openclaw/polymarket/clients/clobService.mjs"
+          ],
+          "gapNote": "Implemented internally but not exposed as MCP tool."
+        }
+      ]
+    },
+    {
+      "name": "Rebates",
+      "total": 1,
+      "callableCovered": 0,
+      "internalCovered": 0,
+      "callableCoverage": 0,
+      "internalCoverage": 0,
+      "endpoints": [
+        {
+          "category": "Rebates",
+          "slug": "api-reference/rebates/get-current-rebated-fees-for-a-maker",
+          "endpointName": "Get current rebated fees for a maker",
+          "docUrl": "https://docs.polymarket.com/api-reference/rebates/get-current-rebated-fees-for-a-maker",
+          "method": "GET",
+          "path": "/rebates/current",
+          "spec": "api-spec/clob-openapi.yaml",
+          "openapiDescriptor": "api-spec/clob-openapi.yaml get /rebates/current",
+          "lastmod": "2026-02-27T18:34:20.498Z",
+          "callableStatus": "MISSING",
+          "internalStatus": "MISSING",
+          "callableEvidence": [],
+          "internalEvidence": [],
+          "gapNote": "No implementation found in current gateway/clients."
+        }
+      ]
+    },
+    {
+      "name": "Profile",
+      "total": 9,
+      "callableCovered": 8,
+      "internalCovered": 8,
+      "callableCoverage": 0.888889,
+      "internalCoverage": 0.888889,
+      "endpoints": [
+        {
+          "category": "Profile",
+          "slug": "api-reference/core/get-closed-positions-for-a-user",
+          "endpointName": "Get closed positions for a user",
+          "docUrl": "https://docs.polymarket.com/api-reference/core/get-closed-positions-for-a-user",
+          "method": "GET",
+          "path": "/closed-positions",
+          "spec": "api-spec/data-openapi.yaml",
+          "openapiDescriptor": "api-spec/data-openapi.yaml get /closed-positions",
+          "lastmod": "2026-03-02T00:16:02.653Z",
+          "callableStatus": "FULL",
+          "internalStatus": "FULL",
+          "callableEvidence": [
+            "src/openclaw/polymarket/mcp/tools.mjs::pm_profile_get"
+          ],
+          "internalEvidence": [
+            "src/openclaw/polymarket/clients/dataApiClient.mjs",
+            "src/openclaw/polymarket/clients/clobService.mjs"
+          ],
+          "gapNote": "Directly callable via MCP tool."
+        },
+        {
+          "category": "Profile",
+          "slug": "api-reference/core/get-current-positions-for-a-user",
+          "endpointName": "Get current positions for a user",
+          "docUrl": "https://docs.polymarket.com/api-reference/core/get-current-positions-for-a-user",
+          "method": "GET",
+          "path": "/positions",
+          "spec": "api-spec/data-openapi.yaml",
+          "openapiDescriptor": "api-spec/data-openapi.yaml get /positions",
+          "lastmod": "2026-03-02T00:16:02.638Z",
+          "callableStatus": "FULL",
+          "internalStatus": "FULL",
+          "callableEvidence": [
+            "src/openclaw/polymarket/mcp/tools.mjs::pm_sync_positions"
+          ],
+          "internalEvidence": [
+            "src/openclaw/polymarket/clients/dataApiClient.mjs",
+            "src/openclaw/polymarket/clients/clobService.mjs"
+          ],
+          "gapNote": "Directly callable via MCP tool."
+        },
+        {
+          "category": "Profile",
+          "slug": "api-reference/core/get-positions-for-a-market",
+          "endpointName": "Get positions for a market",
+          "docUrl": "https://docs.polymarket.com/api-reference/core/get-positions-for-a-market",
+          "method": "GET",
+          "path": "/v1/market-positions",
+          "spec": "api-spec/data-openapi.yaml",
+          "openapiDescriptor": "api-spec/data-openapi.yaml get /v1/market-positions",
+          "lastmod": "2026-03-02T00:16:02.724Z",
+          "callableStatus": "COMPOSITE",
+          "internalStatus": "COMPOSITE",
+          "callableEvidence": [
+            "src/openclaw/polymarket/mcp/tools.mjs::pm_sync_positions"
+          ],
+          "internalEvidence": [
+            "src/openclaw/polymarket/clients/dataApiClient.mjs",
+            "src/openclaw/polymarket/clients/clobService.mjs"
+          ],
+          "gapNote": "Callable via composed MCP workflow (no dedicated 1:1 tool)."
+        },
+        {
+          "category": "Profile",
+          "slug": "api-reference/core/get-total-value-of-a-users-positions",
+          "endpointName": "Get total value of a user&#x27;s positions",
+          "docUrl": "https://docs.polymarket.com/api-reference/core/get-total-value-of-a-users-positions",
+          "method": "GET",
+          "path": "/value",
+          "spec": "api-spec/data-openapi.yaml",
+          "openapiDescriptor": "api-spec/data-openapi.yaml get /value",
+          "lastmod": "2026-03-02T00:16:02.681Z",
+          "callableStatus": "FULL",
+          "internalStatus": "FULL",
+          "callableEvidence": [
+            "src/openclaw/polymarket/mcp/tools.mjs::pm_sync_positions"
+          ],
+          "internalEvidence": [
+            "src/openclaw/polymarket/clients/dataApiClient.mjs",
+            "src/openclaw/polymarket/clients/clobService.mjs"
+          ],
+          "gapNote": "Directly callable via MCP tool."
+        },
+        {
+          "category": "Profile",
+          "slug": "api-reference/core/get-trades-for-a-user-or-markets",
+          "endpointName": "Get trades for a user or markets",
+          "docUrl": "https://docs.polymarket.com/api-reference/core/get-trades-for-a-user-or-markets",
+          "method": "GET",
+          "path": "/trades",
+          "spec": "api-spec/data-openapi.yaml",
+          "openapiDescriptor": "api-spec/data-openapi.yaml get /trades",
+          "lastmod": "2026-03-02T00:16:02.695Z",
+          "callableStatus": "FULL",
+          "internalStatus": "FULL",
+          "callableEvidence": [
+            "src/openclaw/polymarket/mcp/tools.mjs::pm_sync_trades",
+            "src/openclaw/polymarket/mcp/tools.mjs::pm_sync_positions"
+          ],
+          "internalEvidence": [
+            "src/openclaw/polymarket/clients/dataApiClient.mjs",
+            "src/openclaw/polymarket/clients/clobService.mjs"
+          ],
+          "gapNote": "Directly callable via MCP tool."
+        },
+        {
+          "category": "Profile",
+          "slug": "api-reference/core/get-user-activity",
+          "endpointName": "Get user activity",
+          "docUrl": "https://docs.polymarket.com/api-reference/core/get-user-activity",
+          "method": "GET",
+          "path": "/activity",
+          "spec": "api-spec/data-openapi.yaml",
+          "openapiDescriptor": "api-spec/data-openapi.yaml get /activity",
+          "lastmod": "2026-03-02T00:16:02.667Z",
+          "callableStatus": "FULL",
+          "internalStatus": "FULL",
+          "callableEvidence": [
+            "src/openclaw/polymarket/mcp/tools.mjs::pm_sync_positions"
+          ],
+          "internalEvidence": [
+            "src/openclaw/polymarket/clients/dataApiClient.mjs",
+            "src/openclaw/polymarket/clients/clobService.mjs"
+          ],
+          "gapNote": "Directly callable via MCP tool."
+        },
+        {
+          "category": "Profile",
+          "slug": "api-reference/misc/download-an-accounting-snapshot-zip-of-csvs",
+          "endpointName": "Download an accounting snapshot (ZIP of CSVs)",
+          "docUrl": "https://docs.polymarket.com/api-reference/misc/download-an-accounting-snapshot-zip-of-csvs",
+          "method": "GET",
+          "path": "/v1/accounting/snapshot",
+          "spec": "api-spec/data-openapi.yaml",
+          "openapiDescriptor": "api-spec/data-openapi.yaml get /v1/accounting/snapshot",
+          "lastmod": "2026-03-02T00:16:02.738Z",
+          "callableStatus": "MISSING",
+          "internalStatus": "MISSING",
+          "callableEvidence": [],
+          "internalEvidence": [
+            "src/openclaw/polymarket/clients/dataApiClient.mjs"
+          ],
+          "gapNote": "No implementation found in current gateway/clients."
+        },
+        {
+          "category": "Profile",
+          "slug": "api-reference/misc/get-total-markets-a-user-has-traded",
+          "endpointName": "Get total markets a user has traded",
+          "docUrl": "https://docs.polymarket.com/api-reference/misc/get-total-markets-a-user-has-traded",
+          "method": "GET",
+          "path": "/traded",
+          "spec": "api-spec/data-openapi.yaml",
+          "openapiDescriptor": "api-spec/data-openapi.yaml get /traded",
+          "lastmod": "2026-03-02T00:16:02.709Z",
+          "callableStatus": "FULL",
+          "internalStatus": "FULL",
+          "callableEvidence": [
+            "src/openclaw/polymarket/mcp/tools.mjs::pm_profile_get"
+          ],
+          "internalEvidence": [
+            "src/openclaw/polymarket/clients/dataApiClient.mjs"
+          ],
+          "gapNote": "Directly callable via MCP tool."
+        },
+        {
+          "category": "Profile",
+          "slug": "api-reference/profiles/get-public-profile-by-wallet-address",
+          "endpointName": "Get public profile by wallet address",
+          "docUrl": "https://docs.polymarket.com/api-reference/profiles/get-public-profile-by-wallet-address",
+          "method": "GET",
+          "path": "/public-profile",
+          "spec": "api-spec/gamma-openapi.yaml",
+          "openapiDescriptor": "api-spec/gamma-openapi.yaml get /public-profile",
+          "lastmod": "2026-03-02T00:16:02.624Z",
+          "callableStatus": "FULL",
+          "internalStatus": "FULL",
+          "callableEvidence": [
+            "src/openclaw/polymarket/mcp/tools.mjs::pm_profile_get"
+          ],
+          "internalEvidence": [
+            "src/openclaw/polymarket/clients/gammaClient.mjs",
+            "src/openclaw/polymarket/clients/dataApiClient.mjs"
+          ],
+          "gapNote": "Directly callable via MCP tool."
+        }
+      ]
+    },
+    {
+      "name": "Leaderboard",
+      "total": 1,
+      "callableCovered": 1,
+      "internalCovered": 1,
+      "callableCoverage": 1,
+      "internalCoverage": 1,
+      "endpoints": [
+        {
+          "category": "Leaderboard",
+          "slug": "api-reference/core/get-trader-leaderboard-rankings",
+          "endpointName": "Get trader leaderboard rankings",
+          "docUrl": "https://docs.polymarket.com/api-reference/core/get-trader-leaderboard-rankings",
+          "method": "GET",
+          "path": "/v1/leaderboard",
+          "spec": "api-spec/data-openapi.yaml",
+          "openapiDescriptor": "api-spec/data-openapi.yaml get /v1/leaderboard",
+          "lastmod": "2026-03-02T00:16:02.753Z",
+          "callableStatus": "FULL",
+          "internalStatus": "FULL",
+          "callableEvidence": [
+            "src/openclaw/polymarket/mcp/tools.mjs::pm_leaderboard_get"
+          ],
+          "internalEvidence": [
+            "src/openclaw/polymarket/clients/dataApiClient.mjs",
+            "src/openclaw/polymarket/clients/clobService.mjs"
+          ],
+          "gapNote": "Directly callable via MCP tool."
+        }
+      ]
+    },
+    {
+      "name": "Builders",
+      "total": 2,
+      "callableCovered": 2,
+      "internalCovered": 2,
+      "callableCoverage": 1,
+      "internalCoverage": 1,
+      "endpoints": [
+        {
+          "category": "Builders",
+          "slug": "api-reference/builders/get-aggregated-builder-leaderboard",
+          "endpointName": "Get aggregated builder leaderboard",
+          "docUrl": "https://docs.polymarket.com/api-reference/builders/get-aggregated-builder-leaderboard",
+          "method": "GET",
+          "path": "/v1/builders/leaderboard",
+          "spec": "api-spec/data-openapi.yaml",
+          "openapiDescriptor": "api-spec/data-openapi.yaml get /v1/builders/leaderboard",
+          "lastmod": "2026-03-02T00:16:02.768Z",
+          "callableStatus": "FULL",
+          "internalStatus": "FULL",
+          "callableEvidence": [
+            "src/openclaw/polymarket/mcp/tools.mjs::pm_builder_analytics_get"
+          ],
+          "internalEvidence": [
+            "src/openclaw/polymarket/clients/dataApiClient.mjs"
+          ],
+          "gapNote": "Directly callable via MCP tool."
+        },
+        {
+          "category": "Builders",
+          "slug": "api-reference/builders/get-daily-builder-volume-time-series",
+          "endpointName": "Get daily builder volume time-series",
+          "docUrl": "https://docs.polymarket.com/api-reference/builders/get-daily-builder-volume-time-series",
+          "method": "GET",
+          "path": "/v1/builders/volume",
+          "spec": "api-spec/data-openapi.yaml",
+          "openapiDescriptor": "api-spec/data-openapi.yaml get /v1/builders/volume",
+          "lastmod": "2026-03-02T00:16:02.782Z",
+          "callableStatus": "FULL",
+          "internalStatus": "FULL",
+          "callableEvidence": [
+            "src/openclaw/polymarket/mcp/tools.mjs::pm_builder_analytics_get"
+          ],
+          "internalEvidence": [
+            "src/openclaw/polymarket/clients/dataApiClient.mjs"
+          ],
+          "gapNote": "Directly callable via MCP tool."
+        }
+      ]
+    },
+    {
+      "name": "Search",
+      "total": 1,
+      "callableCovered": 1,
+      "internalCovered": 1,
+      "callableCoverage": 1,
+      "internalCoverage": 1,
+      "endpoints": [
+        {
+          "category": "Search",
+          "slug": "api-reference/search/search-markets-events-and-profiles",
+          "endpointName": "Search markets, events, and profiles",
+          "docUrl": "https://docs.polymarket.com/api-reference/search/search-markets-events-and-profiles",
+          "method": "GET",
+          "path": "/public-search",
+          "spec": "api-spec/gamma-openapi.yaml",
+          "openapiDescriptor": "api-spec/gamma-openapi.yaml get /public-search",
+          "lastmod": "2026-03-02T00:16:02.805Z",
+          "callableStatus": "COMPOSITE",
+          "internalStatus": "FULL",
+          "callableEvidence": [
+            "src/openclaw/polymarket/mcp/tools.mjs::pm_market_discover"
+          ],
+          "internalEvidence": [
+            "src/openclaw/polymarket/clients/gammaClient.mjs"
+          ],
+          "gapNote": "Callable via composed MCP workflow (no dedicated 1:1 tool)."
+        }
+      ]
+    },
+    {
+      "name": "Tags",
+      "total": 7,
+      "callableCovered": 7,
+      "internalCovered": 7,
+      "callableCoverage": 1,
+      "internalCoverage": 1,
+      "endpoints": [
+        {
+          "category": "Tags",
+          "slug": "api-reference/tags/get-related-tags-relationships-by-tag-id",
+          "endpointName": "Get related tags (relationships) by tag id",
+          "docUrl": "https://docs.polymarket.com/api-reference/tags/get-related-tags-relationships-by-tag-id",
+          "method": "GET",
+          "path": "/tags/{id}/related-tags",
+          "spec": "api-spec/gamma-openapi.yaml",
+          "openapiDescriptor": "api-spec/gamma-openapi.yaml get /tags/{id}/related-tags",
+          "lastmod": "2026-03-02T00:16:02.860Z",
+          "callableStatus": "FULL",
+          "internalStatus": "FULL",
+          "callableEvidence": [
+            "src/openclaw/polymarket/mcp/tools.mjs::pm_tags_get"
+          ],
+          "internalEvidence": [
+            "src/openclaw/polymarket/clients/gammaClient.mjs"
+          ],
+          "gapNote": "Directly callable via MCP tool."
+        },
+        {
+          "category": "Tags",
+          "slug": "api-reference/tags/get-related-tags-relationships-by-tag-slug",
+          "endpointName": "Get related tags (relationships) by tag slug",
+          "docUrl": "https://docs.polymarket.com/api-reference/tags/get-related-tags-relationships-by-tag-slug",
+          "method": "GET",
+          "path": "/tags/slug/{slug}/related-tags",
+          "spec": "api-spec/gamma-openapi.yaml",
+          "openapiDescriptor": "api-spec/gamma-openapi.yaml get /tags/slug/{slug}/related-tags",
+          "lastmod": "2026-03-02T00:16:02.874Z",
+          "callableStatus": "FULL",
+          "internalStatus": "FULL",
+          "callableEvidence": [
+            "src/openclaw/polymarket/mcp/tools.mjs::pm_tags_get"
+          ],
+          "internalEvidence": [
+            "src/openclaw/polymarket/clients/gammaClient.mjs"
+          ],
+          "gapNote": "Directly callable via MCP tool."
+        },
+        {
+          "category": "Tags",
+          "slug": "api-reference/tags/get-tag-by-id",
+          "endpointName": "Get tag by id",
+          "docUrl": "https://docs.polymarket.com/api-reference/tags/get-tag-by-id",
+          "method": "GET",
+          "path": "/tags/{id}",
+          "spec": "api-spec/gamma-openapi.yaml",
+          "openapiDescriptor": "api-spec/gamma-openapi.yaml get /tags/{id}",
+          "lastmod": "2026-03-02T00:16:02.833Z",
+          "callableStatus": "FULL",
+          "internalStatus": "FULL",
+          "callableEvidence": [
+            "src/openclaw/polymarket/mcp/tools.mjs::pm_tags_get"
+          ],
+          "internalEvidence": [
+            "src/openclaw/polymarket/clients/gammaClient.mjs"
+          ],
+          "gapNote": "Directly callable via MCP tool."
+        },
+        {
+          "category": "Tags",
+          "slug": "api-reference/tags/get-tag-by-slug",
+          "endpointName": "Get tag by slug",
+          "docUrl": "https://docs.polymarket.com/api-reference/tags/get-tag-by-slug",
+          "method": "GET",
+          "path": "/tags/slug/{slug}",
+          "spec": "api-spec/gamma-openapi.yaml",
+          "openapiDescriptor": "api-spec/gamma-openapi.yaml get /tags/slug/{slug}",
+          "lastmod": "2026-03-02T00:16:02.847Z",
+          "callableStatus": "FULL",
+          "internalStatus": "FULL",
+          "callableEvidence": [
+            "src/openclaw/polymarket/mcp/tools.mjs::pm_tags_get"
+          ],
+          "internalEvidence": [
+            "src/openclaw/polymarket/clients/gammaClient.mjs"
+          ],
+          "gapNote": "Directly callable via MCP tool."
+        },
+        {
+          "category": "Tags",
+          "slug": "api-reference/tags/get-tags-related-to-a-tag-id",
+          "endpointName": "Get tags related to a tag id",
+          "docUrl": "https://docs.polymarket.com/api-reference/tags/get-tags-related-to-a-tag-id",
+          "method": "GET",
+          "path": "/tags/{id}/related-tags/tags",
+          "spec": "api-spec/gamma-openapi.yaml",
+          "openapiDescriptor": "api-spec/gamma-openapi.yaml get /tags/{id}/related-tags/tags",
+          "lastmod": "2026-03-02T00:16:02.888Z",
+          "callableStatus": "FULL",
+          "internalStatus": "FULL",
+          "callableEvidence": [
+            "src/openclaw/polymarket/mcp/tools.mjs::pm_tags_get"
+          ],
+          "internalEvidence": [
+            "src/openclaw/polymarket/clients/gammaClient.mjs"
+          ],
+          "gapNote": "Directly callable via MCP tool."
+        },
+        {
+          "category": "Tags",
+          "slug": "api-reference/tags/get-tags-related-to-a-tag-slug",
+          "endpointName": "Get tags related to a tag slug",
+          "docUrl": "https://docs.polymarket.com/api-reference/tags/get-tags-related-to-a-tag-slug",
+          "method": "GET",
+          "path": "/tags/slug/{slug}/related-tags/tags",
+          "spec": "api-spec/gamma-openapi.yaml",
+          "openapiDescriptor": "api-spec/gamma-openapi.yaml get /tags/slug/{slug}/related-tags/tags",
+          "lastmod": "2026-03-02T00:16:02.901Z",
+          "callableStatus": "FULL",
+          "internalStatus": "FULL",
+          "callableEvidence": [
+            "src/openclaw/polymarket/mcp/tools.mjs::pm_tags_get"
+          ],
+          "internalEvidence": [
+            "src/openclaw/polymarket/clients/gammaClient.mjs"
+          ],
+          "gapNote": "Directly callable via MCP tool."
+        },
+        {
+          "category": "Tags",
+          "slug": "api-reference/tags/list-tags",
+          "endpointName": "List tags",
+          "docUrl": "https://docs.polymarket.com/api-reference/tags/list-tags",
+          "method": "GET",
+          "path": "/tags",
+          "spec": "api-spec/gamma-openapi.yaml",
+          "openapiDescriptor": "api-spec/gamma-openapi.yaml get /tags",
+          "lastmod": "2026-03-02T00:16:02.819Z",
+          "callableStatus": "FULL",
+          "internalStatus": "FULL",
+          "callableEvidence": [
+            "src/openclaw/polymarket/mcp/tools.mjs::pm_tags_get"
+          ],
+          "internalEvidence": [
+            "src/openclaw/polymarket/clients/gammaClient.mjs"
+          ],
+          "gapNote": "Directly callable via MCP tool."
+        }
+      ]
+    },
+    {
+      "name": "Series",
+      "total": 2,
+      "callableCovered": 2,
+      "internalCovered": 2,
+      "callableCoverage": 1,
+      "internalCoverage": 1,
+      "endpoints": [
+        {
+          "category": "Series",
+          "slug": "api-reference/series/get-series-by-id",
+          "endpointName": "Get series by id",
+          "docUrl": "https://docs.polymarket.com/api-reference/series/get-series-by-id",
+          "method": "GET",
+          "path": "/series/{id}",
+          "spec": "api-spec/gamma-openapi.yaml",
+          "openapiDescriptor": "api-spec/gamma-openapi.yaml get /series/{id}",
+          "lastmod": "2026-03-02T00:16:02.928Z",
+          "callableStatus": "FULL",
+          "internalStatus": "FULL",
+          "callableEvidence": [
+            "src/openclaw/polymarket/mcp/tools.mjs::pm_series_get"
+          ],
+          "internalEvidence": [
+            "src/openclaw/polymarket/clients/gammaClient.mjs"
+          ],
+          "gapNote": "Directly callable via MCP tool."
+        },
+        {
+          "category": "Series",
+          "slug": "api-reference/series/list-series",
+          "endpointName": "List series",
+          "docUrl": "https://docs.polymarket.com/api-reference/series/list-series",
+          "method": "GET",
+          "path": "/series",
+          "spec": "api-spec/gamma-openapi.yaml",
+          "openapiDescriptor": "api-spec/gamma-openapi.yaml get /series",
+          "lastmod": "2026-03-02T00:16:02.915Z",
+          "callableStatus": "FULL",
+          "internalStatus": "FULL",
+          "callableEvidence": [
+            "src/openclaw/polymarket/mcp/tools.mjs::pm_series_get"
+          ],
+          "internalEvidence": [
+            "src/openclaw/polymarket/clients/gammaClient.mjs"
+          ],
+          "gapNote": "Directly callable via MCP tool."
+        }
+      ]
+    },
+    {
+      "name": "Comments",
+      "total": 3,
+      "callableCovered": 3,
+      "internalCovered": 3,
+      "callableCoverage": 1,
+      "internalCoverage": 1,
+      "endpoints": [
+        {
+          "category": "Comments",
+          "slug": "api-reference/comments/get-comments-by-comment-id",
+          "endpointName": "Get comments by comment id",
+          "docUrl": "https://docs.polymarket.com/api-reference/comments/get-comments-by-comment-id",
+          "method": "GET",
+          "path": "/comments/{id}",
+          "spec": "api-spec/gamma-openapi.yaml",
+          "openapiDescriptor": "api-spec/gamma-openapi.yaml get /comments/{id}",
+          "lastmod": "2026-03-02T00:16:02.960Z",
+          "callableStatus": "FULL",
+          "internalStatus": "FULL",
+          "callableEvidence": [
+            "src/openclaw/polymarket/mcp/tools.mjs::pm_comments_get"
+          ],
+          "internalEvidence": [
+            "src/openclaw/polymarket/clients/gammaClient.mjs"
+          ],
+          "gapNote": "Directly callable via MCP tool."
+        },
+        {
+          "category": "Comments",
+          "slug": "api-reference/comments/get-comments-by-user-address",
+          "endpointName": "Get comments by user address",
+          "docUrl": "https://docs.polymarket.com/api-reference/comments/get-comments-by-user-address",
+          "method": "GET",
+          "path": "/comments/user_address/{user_address}",
+          "spec": "api-spec/gamma-openapi.yaml",
+          "openapiDescriptor": "api-spec/gamma-openapi.yaml get /comments/user_address/{user_address}",
+          "lastmod": "2026-03-02T00:16:02.973Z",
+          "callableStatus": "FULL",
+          "internalStatus": "FULL",
+          "callableEvidence": [
+            "src/openclaw/polymarket/mcp/tools.mjs::pm_comments_get"
+          ],
+          "internalEvidence": [
+            "src/openclaw/polymarket/clients/gammaClient.mjs"
+          ],
+          "gapNote": "Directly callable via MCP tool."
+        },
+        {
+          "category": "Comments",
+          "slug": "api-reference/comments/list-comments",
+          "endpointName": "List comments",
+          "docUrl": "https://docs.polymarket.com/api-reference/comments/list-comments",
+          "method": "GET",
+          "path": "/comments",
+          "spec": "api-spec/gamma-openapi.yaml",
+          "openapiDescriptor": "api-spec/gamma-openapi.yaml get /comments",
+          "lastmod": "2026-03-02T00:16:02.942Z",
+          "callableStatus": "FULL",
+          "internalStatus": "FULL",
+          "callableEvidence": [
+            "src/openclaw/polymarket/mcp/tools.mjs::pm_comments_get"
+          ],
+          "internalEvidence": [
+            "src/openclaw/polymarket/clients/gammaClient.mjs"
+          ],
+          "gapNote": "Directly callable via MCP tool."
+        }
+      ]
+    },
+    {
+      "name": "Sports",
+      "total": 3,
+      "callableCovered": 3,
+      "internalCovered": 3,
+      "callableCoverage": 1,
+      "internalCoverage": 1,
+      "endpoints": [
+        {
+          "category": "Sports",
+          "slug": "api-reference/sports/get-sports-metadata-information",
+          "endpointName": "Get sports metadata information",
+          "docUrl": "https://docs.polymarket.com/api-reference/sports/get-sports-metadata-information",
+          "method": "GET",
+          "path": "/sports",
+          "spec": "api-spec/gamma-openapi.yaml",
+          "openapiDescriptor": "api-spec/gamma-openapi.yaml get /sports",
+          "lastmod": "2026-03-02T00:16:02.988Z",
+          "callableStatus": "FULL",
+          "internalStatus": "FULL",
+          "callableEvidence": [
+            "src/openclaw/polymarket/mcp/tools.mjs::pm_sports_meta_get"
+          ],
+          "internalEvidence": [
+            "src/openclaw/polymarket/clients/gammaClient.mjs"
+          ],
+          "gapNote": "Directly callable via MCP tool."
+        },
+        {
+          "category": "Sports",
+          "slug": "api-reference/sports/get-valid-sports-market-types",
+          "endpointName": "Get valid sports market types",
+          "docUrl": "https://docs.polymarket.com/api-reference/sports/get-valid-sports-market-types",
+          "method": "GET",
+          "path": "/sports/market-types",
+          "spec": "api-spec/gamma-openapi.yaml",
+          "openapiDescriptor": "api-spec/gamma-openapi.yaml get /sports/market-types",
+          "lastmod": "2026-03-02T00:16:03.002Z",
+          "callableStatus": "FULL",
+          "internalStatus": "FULL",
+          "callableEvidence": [
+            "src/openclaw/polymarket/mcp/tools.mjs::pm_sports_meta_get"
+          ],
+          "internalEvidence": [
+            "src/openclaw/polymarket/clients/gammaClient.mjs"
+          ],
+          "gapNote": "Directly callable via MCP tool."
+        },
+        {
+          "category": "Sports",
+          "slug": "api-reference/sports/list-teams",
+          "endpointName": "List teams",
+          "docUrl": "https://docs.polymarket.com/api-reference/sports/list-teams",
+          "method": "GET",
+          "path": "/teams",
+          "spec": "api-spec/gamma-openapi.yaml",
+          "openapiDescriptor": "api-spec/gamma-openapi.yaml get /teams",
+          "lastmod": "2026-03-02T00:16:03.016Z",
+          "callableStatus": "FULL",
+          "internalStatus": "FULL",
+          "callableEvidence": [
+            "src/openclaw/polymarket/mcp/tools.mjs::pm_sports_meta_get"
+          ],
+          "internalEvidence": [
+            "src/openclaw/polymarket/clients/gammaClient.mjs"
+          ],
+          "gapNote": "Directly callable via MCP tool."
+        }
+      ]
+    },
+    {
+      "name": "Bridge",
+      "total": 5,
+      "callableCovered": 5,
+      "internalCovered": 5,
+      "callableCoverage": 1,
+      "internalCoverage": 1,
+      "endpoints": [
+        {
+          "category": "Bridge",
+          "slug": "api-reference/bridge/create-deposit-addresses",
+          "endpointName": "Create deposit addresses",
+          "docUrl": "https://docs.polymarket.com/api-reference/bridge/create-deposit-addresses",
+          "method": "POST",
+          "path": "/deposit",
+          "spec": "api-spec/bridge-openapi.yaml",
+          "openapiDescriptor": "api-spec/bridge-openapi.yaml post /deposit",
+          "lastmod": "2026-03-02T00:16:03.045Z",
+          "callableStatus": "FULL",
+          "internalStatus": "FULL",
+          "callableEvidence": [
+            "src/openclaw/polymarket/mcp/tools.mjs::pm_bridge_deposit_create"
+          ],
+          "internalEvidence": [
+            "src/openclaw/polymarket/clients/bridgeClient.mjs",
+            "src/openclaw/polymarket/polymarketGateway.mjs"
+          ],
+          "gapNote": "Directly callable via MCP tool."
+        },
+        {
+          "category": "Bridge",
+          "slug": "api-reference/bridge/create-withdrawal-addresses",
+          "endpointName": "Create withdrawal addresses",
+          "docUrl": "https://docs.polymarket.com/api-reference/bridge/create-withdrawal-addresses",
+          "method": "POST",
+          "path": "/withdraw",
+          "spec": "api-spec/bridge-openapi.yaml",
+          "openapiDescriptor": "api-spec/bridge-openapi.yaml post /withdraw",
+          "lastmod": "2026-03-02T00:16:03.090Z",
+          "callableStatus": "FULL",
+          "internalStatus": "FULL",
+          "callableEvidence": [
+            "src/openclaw/polymarket/mcp/tools.mjs::pm_bridge_withdraw_create"
+          ],
+          "internalEvidence": [
+            "src/openclaw/polymarket/clients/bridgeClient.mjs",
+            "src/openclaw/polymarket/polymarketGateway.mjs"
+          ],
+          "gapNote": "Directly callable via MCP tool."
+        },
+        {
+          "category": "Bridge",
+          "slug": "api-reference/bridge/get-a-quote",
+          "endpointName": "Get a quote",
+          "docUrl": "https://docs.polymarket.com/api-reference/bridge/get-a-quote",
+          "method": "POST",
+          "path": "/quote",
+          "spec": "api-spec/bridge-openapi.yaml",
+          "openapiDescriptor": "api-spec/bridge-openapi.yaml post /quote",
+          "lastmod": "2026-03-02T00:16:03.061Z",
+          "callableStatus": "FULL",
+          "internalStatus": "FULL",
+          "callableEvidence": [
+            "src/openclaw/polymarket/mcp/tools.mjs::pm_bridge_quote_get"
+          ],
+          "internalEvidence": [
+            "src/openclaw/polymarket/clients/bridgeClient.mjs",
+            "src/openclaw/polymarket/polymarketGateway.mjs"
+          ],
+          "gapNote": "Directly callable via MCP tool."
+        },
+        {
+          "category": "Bridge",
+          "slug": "api-reference/bridge/get-supported-assets",
+          "endpointName": "Get supported assets",
+          "docUrl": "https://docs.polymarket.com/api-reference/bridge/get-supported-assets",
+          "method": "GET",
+          "path": "/supported-assets",
+          "spec": "api-spec/bridge-openapi.yaml",
+          "openapiDescriptor": "api-spec/bridge-openapi.yaml get /supported-assets",
+          "lastmod": "2026-03-02T00:16:03.031Z",
+          "callableStatus": "FULL",
+          "internalStatus": "FULL",
+          "callableEvidence": [
+            "src/openclaw/polymarket/mcp/tools.mjs::pm_bridge_supported_assets_get"
+          ],
+          "internalEvidence": [
+            "src/openclaw/polymarket/clients/bridgeClient.mjs",
+            "src/openclaw/polymarket/polymarketGateway.mjs"
+          ],
+          "gapNote": "Directly callable via MCP tool."
+        },
+        {
+          "category": "Bridge",
+          "slug": "api-reference/bridge/get-transaction-status",
+          "endpointName": "Get transaction status",
+          "docUrl": "https://docs.polymarket.com/api-reference/bridge/get-transaction-status",
+          "method": "GET",
+          "path": "/status/{address}",
+          "spec": "api-spec/bridge-openapi.yaml",
+          "openapiDescriptor": "api-spec/bridge-openapi.yaml get /status/{address}",
+          "lastmod": "2026-03-02T00:16:03.077Z",
+          "callableStatus": "FULL",
+          "internalStatus": "FULL",
+          "callableEvidence": [
+            "src/openclaw/polymarket/mcp/tools.mjs::pm_bridge_status_get"
+          ],
+          "internalEvidence": [
+            "src/openclaw/polymarket/clients/bridgeClient.mjs",
+            "src/openclaw/polymarket/polymarketGateway.mjs"
+          ],
+          "gapNote": "Directly callable via MCP tool."
+        }
+      ]
+    },
+    {
+      "name": "WebSocket",
+      "total": 3,
+      "callableCovered": 3,
+      "internalCovered": 3,
+      "callableCoverage": 1,
+      "internalCoverage": 1,
+      "endpoints": [
+        {
+          "category": "WebSocket",
+          "slug": "api-reference/wss/market",
+          "endpointName": "Market Channel",
+          "docUrl": "https://docs.polymarket.com/api-reference/wss/market",
+          "method": null,
+          "path": null,
+          "spec": null,
+          "openapiDescriptor": null,
+          "lastmod": "2026-02-19T00:58:29.737Z",
+          "callableStatus": "FULL",
+          "internalStatus": "FULL",
+          "callableEvidence": [
+            "src/openclaw/polymarket/mcp/tools.mjs::pm_ws_subscribe",
+            "src/openclaw/polymarket/mcp/tools.mjs::pm_ws_poll",
+            "src/openclaw/polymarket/mcp/tools.mjs::pm_ws_unsubscribe"
+          ],
+          "internalEvidence": [
+            "src/openclaw/polymarket/ws/channelClient.mjs",
+            "src/openclaw/polymarket/polymarketGateway.mjs"
+          ],
+          "gapNote": "Directly callable via MCP tool."
+        },
+        {
+          "category": "WebSocket",
+          "slug": "api-reference/wss/sports",
+          "endpointName": "Sports Channel",
+          "docUrl": "https://docs.polymarket.com/api-reference/wss/sports",
+          "method": null,
+          "path": null,
+          "spec": null,
+          "openapiDescriptor": null,
+          "lastmod": "2026-02-19T00:58:29.741Z",
+          "callableStatus": "FULL",
+          "internalStatus": "FULL",
+          "callableEvidence": [
+            "src/openclaw/polymarket/mcp/tools.mjs::pm_ws_subscribe",
+            "src/openclaw/polymarket/mcp/tools.mjs::pm_ws_poll",
+            "src/openclaw/polymarket/mcp/tools.mjs::pm_ws_unsubscribe"
+          ],
+          "internalEvidence": [
+            "src/openclaw/polymarket/ws/channelClient.mjs",
+            "src/openclaw/polymarket/polymarketGateway.mjs"
+          ],
+          "gapNote": "Directly callable via MCP tool."
+        },
+        {
+          "category": "WebSocket",
+          "slug": "api-reference/wss/user",
+          "endpointName": "User Channel",
+          "docUrl": "https://docs.polymarket.com/api-reference/wss/user",
+          "method": null,
+          "path": null,
+          "spec": null,
+          "openapiDescriptor": null,
+          "lastmod": "2026-02-19T00:58:29.734Z",
+          "callableStatus": "FULL",
+          "internalStatus": "FULL",
+          "callableEvidence": [
+            "src/openclaw/polymarket/mcp/tools.mjs::pm_ws_subscribe",
+            "src/openclaw/polymarket/mcp/tools.mjs::pm_ws_poll",
+            "src/openclaw/polymarket/mcp/tools.mjs::pm_ws_unsubscribe"
+          ],
+          "internalEvidence": [
+            "src/openclaw/polymarket/ws/channelClient.mjs",
+            "src/openclaw/polymarket/polymarketGateway.mjs"
+          ],
+          "gapNote": "Directly callable via MCP tool."
+        }
+      ]
+    }
+  ]
+}

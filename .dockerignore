@@ -1,0 +1,37 @@
+# VCS / tooling metadata
+.git
+.gitignore
+.dockerignore
+
+# Dependencies
+node_modules/
+
+# Secrets and local env files
+.env
+.env.*
+!.env.example
+L2_API_CREDS.md
+
+# Sensitive or local runtime outputs
+audit/
+MCP_TOOL_VALIDATION*.md
+
+# Logs / temp files
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.tmp
+*.swp
+*.swo
+
+# Editor / OS junk
+.DS_Store
+.vscode/
+.idea/
+
+# Non-runtime project artifacts
+test/
+docs/
+examples/
